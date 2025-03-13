@@ -35,20 +35,3 @@ html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "/")
 html_js_files = [
     ("readthedocs.js", {"defer": "defer"}),
 ]
-
-myst_enable_extensions = [
-    "amsmath",
-    "attrs_inline",
-    "colon_fence",
-    "deflist",
-    "dollarmath",
-    "fieldlist",
-    "html_admonition",
-    "html_image",
-    "linkify",
-    "replacements",
-    "smartquotes",
-    "strikethrough",
-    "substitution",
-    "tasklist",
-]
