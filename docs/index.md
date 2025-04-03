@@ -5,25 +5,28 @@
 
 # UVE documentation
 
-Add your content using ``reStructuredText`` syntax. See the
+<!-- Add your content using ``reStructuredText`` syntax. See the
 `reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-documentation for details.
+documentation for details. -->
 
 ```{toctree}
 :maxdepth: 3
+:caption: English Documentation
 
 Preparation.md
 content_en/Author.md
 content_en/Simulation.md
-content_en/SNPS.md
-content_en/CDNS.md
-# Ensure these files exist in the correct directory
+   content_en/SNPS.md
+   content_en/CDNS.md
+```
 
-# 中文文档
+```{toctree}
+:maxdepth: 3
+:caption: 中文文档
+
 content_zh/Preparation_zh.md
 content_zh/Author_zh.md
 content_zh/Simulation_zh.md
-content_zh/SNPS_zh.md
-content_zh/CDNS_zh.md
-# Ensure these files exist in the correct directory
+   content_zh/SNPS_zh.md
+   content_zh/CDNS_zh.md
 ```
