@@ -12,7 +12,7 @@ documentation for details.
 ```{toctree}
 :maxdepth: 3
 
-content_en/Preparation.md
+Preparation.md
 content_en/Author.md
 content_en/Simulation.md
 content_en/SNPS.md
