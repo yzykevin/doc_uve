@@ -1,9 +1,9 @@
+# Preparation Guide before using
+
 - [Preparation Guide before using](#preparation-guide-before-using)
   - [General Options](#general-options)
     - [Supported Shells for `-env_setup`](#supported-shells-for--env_setup)
   - [Notes](#notes)
-
-# Preparation Guide before using
 
 This document provides instructions and options for running a single simulation. Ensure that the run is executed in the root folder of the cloned repository.
 
