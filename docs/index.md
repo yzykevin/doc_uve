@@ -10,6 +10,20 @@ Add your content using ``reStructuredText`` syntax. See the
 documentation for details.
 
 ```{toctree}
-:maxdepth: 2
+:maxdepth: 3
 
-<!-- Guide_run.md -->
+content_en/Preparation.md
+content_en/Author.md
+content_en/Simulation.md
+   content_en/SNPS.md
+   content_en/CDNS.md
+# Add other useful tags below as needed
+# Example: UsefulTag.md
+
+# 中文文档
+content_zh/Preparation_zh.md
+content_zh/Author_zh.md
+content_zh/Simulation_zh.md
+   content_zh/SNPS_zh.md
+   content_zh/CDNS_zh.md
+```
