@@ -21,10 +21,6 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 html_static_path = ['_static']
 
 language = 'en,cn'
-# Enable localization
-locale_dirs = ['content_zh/']   # Path to translation files
-gettext_compact = False     # Optional: Disable compact mode
-# ...existing code...
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
