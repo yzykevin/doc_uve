@@ -19,8 +19,8 @@ Below is a list of available command-line options for the simulation:
 
 ### Supported Shells for `-env_setup`
 
-- `bash`
-- `tcsh`
+- `bash/zsh`
+- `tcsh/csh`
 
 ## Notes
 
