@@ -1,13 +1,4 @@
-# SNPS VCS
-
-- [SNPS VCS](#snps-vcs)
-  - [-s\_run2](#-s_run2)
-  - [-s\_run3](#-s_run3)
-  - [-s\_com](#-s_com)
-  - [-s\_dut](#-s_dut)
-  - [-s\_tb](#-s_tb)
-  - [-s\_sim](#-s_sim)
-  - [-s\_part\_comp](#-s_part_comp)
+# VCS
 
 > Specify `-tool=snps` to use these options.
 

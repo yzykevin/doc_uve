@@ -1,27 +1,5 @@
 # Simulation
 
-- [Simulation](#simulation)
-  - [-tool](#-tool)
-  - [-list](#-list)
-  - [-auto\_dut](#-auto_dut)
-  - [-auto\_tb](#-auto_tb)
-  - [-manual\_dut](#-manual_dut)
-  - [-manual\_tb](#-manual_tb)
-  - [-run\_folder](#-run_folder)
-  - [-name](#-name)
-    - [-base\_dut](#-base_dut)
-    - [-base\_tb](#-base_tb)
-  - [-dump\_scope](#-dump_scope)
-  - [-prerun](#-prerun)
-  - [-postrun](#-postrun)
-  - [-define](#-define)
-  - [-tpa](#-tpa)
-  - [-vpa](#-vpa)
-  - [-seed](#-seed)
-  - [-repeat](#-repeat)
-  - [-wave](#-wave)
-    - [-cov](#-cov)
-
 ## -tool
 
 Select the tool to use: Synopsys VCS (`snps`) or Cadence XRUN (`cdns`). Default is `snps`.

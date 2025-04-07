@@ -1,12 +1,4 @@
-# CDNS Xcelium
-
-- [CDNS Xcelium](#cdns-xcelium)
-  - [-c\_run1](#-c_run1)
-  - [-c\_run3](#-c_run3)
-  - [-c\_com](#-c_com)
-  - [-c\_dut](#-c_dut)
-  - [-c\_tb](#-c_tb)
-  - [-c\_sim](#-c_sim)
+# Xcelium
 
 > Specify `-tool=cdns` to use these options.
 
