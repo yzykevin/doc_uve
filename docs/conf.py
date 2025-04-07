@@ -14,7 +14,7 @@ release = '1.0'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['myst_parser', 'sphinx.ext.epub']  # 添加 sphinx.ext.epub 扩展
+extensions = ['myst_parser']
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
@@ -37,17 +37,17 @@ html_js_files = [
 ]
 
 # -- Options for EPUB output -------------------------------------------------
-# epub_show_urls = 'footnote'  # 在 EPUB 中显示 URL 的方式
-# epub_title = project  # 使用项目名称作为 EPUB 标题
-# epub_author = author  # 使用作者信息
-# epub_publisher = author  # 使用作者作为出版者
-# epub_identifier = html_baseurl  # 使用 base URL 作为标识符
-# epub_scheme = 'URL'  # 标识符的类型
-# epub_cover = ('_static/cover.png', '')  # 可选：指定封面图片
+epub_show_urls = 'footnote'  # 在 EPUB 中显示 URL 的方式
+epub_title = project  # 使用项目名称作为 EPUB 标题
+epub_author = author  # 使用作者信息
+epub_publisher = author  # 使用作者作为出版者
+epub_identifier = html_baseurl  # 使用 base URL 作为标识符
+epub_scheme = 'URL'  # 标识符的类型
+epub_cover = ('_static/cover.png', '')  # 可选：指定封面图片
 
 
-# latex_engine = 'xelatex'
-# latex_use_xindy = False
-# latex_elements = {
-#     'preamble': '\\usepackage[UTF8]{ctex}\n',
-# }
+latex_engine = 'xelatex'
+latex_use_xindy = False
+latex_elements = {
+    'preamble': '\\usepackage[UTF8]{ctex}\n',
+}
