@@ -37,13 +37,13 @@ html_js_files = [
 ]
 
 # -- Options for EPUB output -------------------------------------------------
-epub_show_urls = 'footnote'  # 在 EPUB 中显示 URL 的方式
-epub_title = project  # 使用项目名称作为 EPUB 标题
-epub_author = author  # 使用作者信息
-epub_publisher = author  # 使用作者作为出版者
-epub_identifier = html_baseurl  # 使用 base URL 作为标识符
-epub_scheme = 'URL'  # 标识符的类型
-epub_cover = ('_static/cover.png', '')  # 可选：指定封面图片
+# epub_show_urls = 'footnote'  # 在 EPUB 中显示 URL 的方式
+# epub_title = project  # 使用项目名称作为 EPUB 标题
+# epub_author = author  # 使用作者信息
+# epub_publisher = author  # 使用作者作为出版者
+# epub_identifier = html_baseurl  # 使用 base URL 作为标识符
+# epub_scheme = 'URL'  # 标识符的类型
+# epub_cover = ('_static/cover.png', '')  # 可选：指定封面图片
 
 
 latex_engine = 'xelatex'
