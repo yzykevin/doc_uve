@@ -15,6 +15,7 @@ Universal Verification Environment
 
 content_en/preparation.md
 content_en/manage_pre.md
+content_en/guideline.md
 ```
 
 ```{toctree}
