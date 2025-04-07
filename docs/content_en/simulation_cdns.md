@@ -1,6 +1,6 @@
-# Options for Xcelium
+# CDNS Xcelium
 
-- [Options for Xcelium](#options-for-xcelium)
+- [CDNS Xcelium](#cdns-xcelium)
   - [-c\_run1](#-c_run1)
   - [-c\_run3](#-c_run3)
   - [-c\_com](#-c_com)

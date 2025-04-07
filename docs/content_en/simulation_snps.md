@@ -1,6 +1,6 @@
-# Options for VCS
+# SNPS VCS
 
-- [Options for VCS](#options-for-vcs)
+- [SNPS VCS](#snps-vcs)
   - [-s\_run2](#-s_run2)
   - [-s\_run3](#-s_run3)
   - [-s\_com](#-s_com)

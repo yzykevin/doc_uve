@@ -9,6 +9,18 @@
   - [-manual\_tb](#-manual_tb)
   - [-run\_folder](#-run_folder)
   - [-name](#-name)
+    - [-base\_dut](#-base_dut)
+    - [-base\_tb](#-base_tb)
+  - [-dump\_scope](#-dump_scope)
+  - [-prerun](#-prerun)
+  - [-postrun](#-postrun)
+  - [-define](#-define)
+  - [-tpa](#-tpa)
+  - [-vpa](#-vpa)
+  - [-seed](#-seed)
+  - [-repeat](#-repeat)
+  - [-wave](#-wave)
+    - [-cov](#-cov)
 
 ## -tool
 
@@ -84,3 +96,68 @@ Specify the run folder. Default is `work`.
 Specify the test name.
 
 Example, using `-name=xxx_test`. This will use xxx_test.sv like +UVM_TESTNAME=xxx_test
+
+### -base_dut
+
+3-step only! skip dut compiling, use the base_dut specified dut compiling database。
+
+Example: `-base_dut=xxx`  
+This creates and compiles `PROJECT_NAME_xxx`. By default, `PROJECT_NAME` is used as the compilation folder.
+
+### -base_tb
+
+3-step only! skip tb compiling, use the base_tb specified tb compiling database
+
+Example: `-base_tb=xxx_xxx_test`
+
+## -dump_scope
+
+Specify the waveform dump scope. Default: `verif/test/common/dump_scope.txt`.
+
+## -prerun
+
+Run a command/script before simulation. Use the format: `-prerun=""`.
+
+## -postrun
+
+Run a command/script after simulation. Use the format: `-postrun=""`.
+
+## -define
+
+Pass defines to the simulation. Use the format: `-define=""`.
+
+Examples:  
+`-define="aaa"`  
+`-define="aaa bbb ccc"`
+
+## -tpa
+
+Pass test plug arguments to the simulation. Use the format: `-tpa=""`.
+
+Examples:  
+`-tpa="+aaa"`  
+`-tpa="+aaa, +bbb"`
+
+## -vpa
+
+Pass value plug arguments to the simulation. Use the format: `-vpa=""`.
+
+Examples:  
+`-vpa="+aaa=xxx"`  
+`-vpa="+aaa=xxx, +bbb=yyy"`
+
+## -seed
+
+Specify a seed for the simulation. Default: random.
+
+## -repeat
+
+Specify the number of times to repeat a test case. Default: 1.
+
+## -wave
+
+Specify the wave dump format. Options: `fsdb`, `vpd`, `shm`.
+
+### -cov
+
+Enable coverage collection. Options: `all` or specific types (e.g., `line,tgl,fsm,branch,cond,assert`).

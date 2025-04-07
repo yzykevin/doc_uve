@@ -5,28 +5,63 @@
 
 # UVE documentation
 
-<!-- Add your content using ``reStructuredText`` syntax. See the
-`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-documentation for details. -->
+Universal Verification Environment
+
+> Should be executed in the project's root folder.
+
+```{toctree}
+:maxdepth: 3
+:caption: Before Start
+
+content_en/preparation.md
+content_en/debug.md
+```
 
 ```{toctree}
 :maxdepth: 4
-:caption: Options
+:caption: Simulation
 
-content_en/Preparation.md
-content_en/Simulation.md
-   content_en/SNPS.md
-content_en/CDNS.md
-content_en/Author.md
+content_en/simulation.md
+content_en/simulation_snps.md
+content_en/simulation_cdns.md
 ```
 
-<!-- ```{toctree}
+```{toctree}
 :maxdepth: 3
-:caption: 中文文档
+:caption: Regression
 
-content_zh/Preparation_zh.md
-content_zh/Author_zh.md
-content_zh/Simulation_zh.md
-   content_zh/SNPS_zh.md
-   content_zh/CDNS_zh.md
-``` -->
+content_en/regression.md
+content_en/regression_snps.md
+content_en/regression_cdns.md
+```
+
+```{toctree}
+:maxdepth: 3
+:caption: Other Libs
+
+content_en/libraries.md
+```
+
+```{toctree}
+:maxdepth: 3
+:caption: Job Scheduler
+
+content_en/job_scheduler.md
+```
+
+```{toctree}
+:maxdepth: 3
+:caption: Tools
+
+content_en/info_analysis.md
+content_en/gen_uvm.md
+content_en/gen_tb_related.md
+content_en/manage.md
+```
+
+```{toctree}
+:maxdepth: 3
+:caption: About
+
+content_en/author.md
+```
