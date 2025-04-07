@@ -46,8 +46,8 @@ html_js_files = [
 # epub_cover = ('_static/cover.png', '')  # 可选：指定封面图片
 
 
-latex_engine = 'xelatex'
-latex_use_xindy = False
-latex_elements = {
-    'preamble': '\\usepackage[UTF8]{ctex}\n',
-}
+# latex_engine = 'xelatex'
+# latex_use_xindy = False
+# latex_elements = {
+#     'preamble': '\\usepackage[UTF8]{ctex}\n',
+# }
