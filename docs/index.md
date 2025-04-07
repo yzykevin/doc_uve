@@ -11,18 +11,16 @@ documentation for details. -->
 
 ```{toctree}
 :maxdepth: 3
-:caption: English Documentation
+:caption: Options
 
 content_en/Preparation.md
-content_en/Author.md
 content_en/Simulation.md
    content_en/SNPS.md
    content_en/CDNS.md
-<!-- Guide_run.md -->
-
+content_en/Author.md
 ```
 
-```{toctree}
+<!-- ```{toctree}
 :maxdepth: 3
 :caption: 中文文档
 
@@ -31,4 +29,4 @@ content_zh/Author_zh.md
 content_zh/Simulation_zh.md
    content_zh/SNPS_zh.md
    content_zh/CDNS_zh.md
-```
+``` -->
