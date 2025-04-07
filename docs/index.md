@@ -14,7 +14,7 @@ Universal Verification Environment
 :caption: Before Start
 
 content_en/preparation.md
-content_en/debug.md
+content_en/manage_pre.md
 ```
 
 ```{toctree}
