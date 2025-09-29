@@ -43,7 +43,7 @@ To use this, follow these steps:
 
 Additionally, automatically generate `xxx_test_include.sv` in the `verif/tb/test_include/` folder, which will include all tests found in `verif/test/xxx/` and be used for the testbench.
 
-The `tb.f` will include all existing `verif/pkg/xxx` folders, `vip` folders, and `verif/test/xxx` folder paths.
+The `tb.f` will include all existing `verif/pkg/xxx` folders, `vip_snps` folders, and `verif/test/xxx` folder paths.
 
 ## -manual_dut
 
