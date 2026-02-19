@@ -24,7 +24,7 @@ html_static_path = ['_static']
 language = 'en'
 
 # Master document
-master_doc = 'index_en'
+master_doc = 'index'
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
