@@ -27,7 +27,7 @@ build:
 #   Create separate versions in RTD and configure each to use different conf files
 
 sphinx:
-   configuration: docs/conf_en.py
+   configuration: docs/conf.py
 
 # Optionally, but recommended,
 # declare the Python requirements required to build your documentation
