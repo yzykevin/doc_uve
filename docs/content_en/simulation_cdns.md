@@ -22,6 +22,16 @@ Compile DUT using XRUN 3-step method.
 
 Compile testbench using XRUN 3-step method.
 
+**Guardrail:** `-c_tb` requires a valid DUT compile database. If no DUT compile is requested in the same command, specify `-base_dut=<name>`.
+
 ## -c_sim
 
 Execute simulation using XRUN 3-step method.
+
+**Guardrail:** `-c_sim` requires a valid TB compile database. If no TB compile is requested in the same command, specify `-base_tb=<name>`.
+
+## Wave compatibility (XRUN)
+
+`-wave=shm` is the native Cadence format.
+
+`-wave=fsdb` and `-wave=vpd` may work only with proper PLI setup and are not the default recommendation.

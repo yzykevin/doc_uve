@@ -88,6 +88,12 @@ This creates and compiles `PROJECT_NAME_xxx`. By default, `PROJECT_NAME` is used
 
 Example: `-base_tb=xxx_xxx_test`
 
+## -dry_run
+
+Run the complete flow without actual simulation execution.
+
+`-dry_run` is recommended when first checking command legality and generated command lines.
+
 ## -dump_scope
 
 Specify the waveform dump scope. Default: `verif/test/common/dump_scope.txt`.
@@ -136,6 +142,21 @@ Specify the number of times to repeat a test case. Default: 1.
 
 Specify the wave dump format. Options: `fsdb`, `vpd`, `shm`.
 
-### -cov
+Compatibility recommendation:
+
+- `snps`: use `fsdb` or `vpd`; `shm` is invalid.
+- `cdns`: use `shm`; `fsdb`/`vpd` requires extra PLI environment.
+
+## -cov
 
 Enable coverage collection. Options: `all` or specific types (e.g., `line,tgl,fsm,branch,cond,assert`).
+
+## Runtime guardrails
+
+During non-`dry_run` execution, UVE performs pre-checks before launching tool commands:
+
+- Step3 partial flows require matching base compile DB (`-base_dut` / `-base_tb`) when compile stages are skipped.
+- Tool-wave mismatch is reported early to avoid wasting runtime.
+- Required executables are checked in PATH (for example: `vcs`/`vlogan`/`xrun`).
+
+If the command is executed outside the prepared container environment, these checks may fail as expected.
