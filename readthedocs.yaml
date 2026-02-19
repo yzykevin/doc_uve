@@ -11,8 +11,23 @@ build:
     python: "3.13"
 
 # Build documentation in the "docs/" directory with Sphinx
+# Use separate configuration files for each language:
+# - conf_en.py for English (default)
+# - conf_cn.py for Chinese
+#
+# To build both languages, you have TWO options:
+#
+# OPTION 1: Two separate Read the Docs projects (Recommended)
+#   1. Create a new project on RTD for the Chinese version
+#   2. Set the configuration file to docs/conf_cn.py
+#   3. Set the project language to Chinese (zh_CN)
+#   4. In the English project's Translations settings, add the Chinese project
+#
+# OPTION 2: Use versions
+#   Create separate versions in RTD and configure each to use different conf files
+
 sphinx:
-   configuration: docs/conf.py
+   configuration: docs/conf_en.py
 
 # Optionally, but recommended,
 # declare the Python requirements required to build your documentation
