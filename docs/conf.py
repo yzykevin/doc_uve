@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'UVE'
-copyright = '2021-2025, Saltyfish'
+copyright = '2021-2026, Saltyfish'
 author = 'Saltyfish'
 release = '1.0'
 
