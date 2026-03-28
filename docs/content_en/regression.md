@@ -131,27 +131,3 @@ Please refer to the Guideline_for_creating_and_managing_files.pdf for:
 - warning check/ignore
 
 This is very important for QA for verification.
-
-## Real-world random regression helper
-
-A helper script is available at:
-
-`uve_tools/md_tools/real_regress_runner.py`
-
-Typical usage in prepared container environment:
-
-```terminal
-python3 uve_tools/md_tools/real_regress_runner.py --project-root /home/devuser/uve/uve --count 30 --mode real --tools all --setup-script auto --shell-mode auto
-```
-
-Recommended behavior:
-
-- default is shared run folder so compile and testbench artifacts can be reused intentionally.
-- add `--isolated-run-folder` only when strict per-case isolation is required.
-- use `--skip-partial-flow` if you want to avoid selecting partial flow commands in random sampling.
-
-Output:
-
-- `summary.json`
-- `summary.md`
-- per-case logs and command records

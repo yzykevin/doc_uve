@@ -1,6 +1,6 @@
 # Register Generator
 
-The register generator (`md_reggen`) is integrated in `uve_tools` and generates register-related artifacts from a register description file.
+The register generator is integrated in `uve_tools` and generates register-related artifacts from a register description file.
 
 ## Supported Input Formats
 
@@ -18,6 +18,6 @@ The register generator (`md_reggen`) is integrated in `uve_tools` and generates 
 
 ## Usage
 
-The tool is available as a standalone module under `uve_tools/md_reggen/`.
+The tool is available as a standalone module in `uve_tools`.
 
 Refer to the tool's own documentation for detailed CLI options and input file format.
