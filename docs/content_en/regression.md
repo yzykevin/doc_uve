@@ -88,7 +88,7 @@ Example:
 
 Please check the detailed options in tools related descriptions.
 
-## -report (TBD)
+## -report
 
 This option is only valid during regression and supports both VCS-2step and VCS-3step flows.
 
