@@ -29,3 +29,7 @@ Kill processes matching a specific pattern using `grep`.
 - **Type**: `string`
 - **Default**: Empty string
 - **Usage**: Specify a pattern to terminate processes. Example: `-kill_grep=xxx`.
+
+## Certitude Tools
+
+Certitude Tools provides HDL file list generation, simulator compile and execute script generation for VCS, NC, and ModelSim, and cleanup of generated artifacts for mutation testing workflows.

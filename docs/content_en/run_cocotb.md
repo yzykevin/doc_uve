@@ -14,39 +14,49 @@ It supports multiple simulators and both Verilog and VHDL designs.
 - Verilator
 - GHDL / NVC
 
-## Key Options
+## Capabilities
 
-### -testmodule
+**Test Control**
+- Specify Python test module(s), individual test functions, and top-level module
+- Control random seed and repeat count for randomized test campaigns
 
-Specify the Python test module to run.
+**Source File Support**
+- Supports Verilog and VHDL source file lists or individual file paths
+- Supports include directories for Verilog
+- Supports VAMS (analog) source files for AMS simulation
 
-### -top
+**DUT Configuration**
+- Pass module parameters directly (NAME=VALUE format)
+- Configure HDL time unit and time precision
 
-Specify the DUT top-level module name.
+**Simulation Runtime**
+- Pre-compile and post-run argument passthrough for each simulator phase
+- Simulator plusargs support
+- Configurable build directory and results output file
 
-### -sim
+**Waveform Dumping**
+- Enable waveform capture with support for GHW, FST, and VCD formats
 
-Select the simulator to use.
+**Coverage and Profiling**
+- Python code coverage collection
+- Call-graph profiling for performance analysis
+- cocotb internals coverage for framework-level analysis
 
-### -seed
+**Analog/Mixed-Signal (AMS)**
+- AMS simulation support for Xcelium and VCS
+- Discipline configuration for mixed-signal designs
 
-Specify a random seed. Default: random.
+**GPI Interface (VHDL)**
+- Selectable GPI interface for VHDL designs: VPI, VHPI, or FLI
+- Support for extra GPI libraries and custom PyGPI entry points
 
-### -repeat
+**X/Z Value Resolution**
+- Configurable behavior when X/Z logic values are converted to integers: error, zeros, ones, or random
 
-Repeat the test case a specified number of times.
-
-### -wave
-
-Enable waveform dumping.
-
-### -cov
-
-Enable coverage collection.
-
-### -parameters
-
-Pass parameters to the DUT in `NAME=VALUE` format.
+**Debug Support**
+- Pause before simulation start for external debugger attachment
+- Drop into Python debugger (pdb) on test exception
+- HTTP memory debugging endpoint
 
 ## Example
 
