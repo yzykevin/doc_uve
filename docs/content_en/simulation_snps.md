@@ -43,4 +43,8 @@ For manual partitioning, compile time can be reduced. However, you must combine 
 
 `-wave=fsdb` and `-wave=vpd` are supported for VCS.
 
-`-wave=shm` is Cadence-oriented and is blocked for VCS.
+`-wave=shm` and `-wave=indago` are Cadence-oriented and are blocked for VCS.
+
+## -gui (VCS)
+
+Opens Verdi in interactive mode. Simulation pauses at time 0; the user manually triggers the run inside Verdi.

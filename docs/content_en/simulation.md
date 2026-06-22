@@ -140,12 +140,22 @@ Specify the number of times to repeat a test case. Default: 1.
 
 ## -wave
 
-Specify the wave dump format. Options: `fsdb`, `vpd`, `shm`.
+Specify the wave dump format. Options: `fsdb`, `vpd`, `shm`, `indago`.
 
 Compatibility recommendation:
 
-- `snps`: use `fsdb` or `vpd`; `shm` is invalid.
-- `cdns`: use `shm`; `fsdb`/`vpd` requires extra PLI environment.
+- `snps`: use `fsdb` or `vpd`; `shm` and `indago` are invalid.
+- `cdns`: use `shm` or `indago`; `fsdb`/`vpd` requires extra PLI environment.
+
+## -gui
+
+Open the waveform viewer in interactive mode. Simulation pauses at time 0 and waits for the user to manually start the run.
+
+Behavior by tool:
+
+- `snps`: opens Verdi; combine with `-wave=fsdb` for waveform visibility.
+- `cdns` + `-wave=shm`: opens SimVision; pauses and waits for user interaction.
+- `cdns` + `-wave=indago`: opens Indago; probes are configured automatically, simulation pauses and waits for user interaction.
 
 ## -cov
 

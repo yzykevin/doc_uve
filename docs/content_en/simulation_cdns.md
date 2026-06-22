@@ -34,4 +34,13 @@ Execute simulation using XRUN 3-step method.
 
 `-wave=shm` is the native Cadence format.
 
+`-wave=indago` is supported for Cadence Indago waveform capture.
+
 `-wave=fsdb` and `-wave=vpd` may work only with proper PLI setup and are not the default recommendation.
+
+## -gui (XRUN)
+
+Opens the waveform viewer in interactive mode. Simulation pauses at time 0 and waits for user interaction.
+
+- With `-wave=shm`: opens SimVision.
+- With `-wave=indago`: opens Indago with probes pre-configured.

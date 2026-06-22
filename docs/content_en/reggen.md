@@ -11,10 +11,10 @@ The register generator (`reggen`) is integrated in `uve_tools`. It takes a regis
 
 ## Supported Output Types
 
-- **UVM RAL Model** — SystemVerilog UVM register abstraction layer for testbench integration
-- **SystemVerilog RTL** — synthesizable register block RTL with configurable bus interface
-- **C Header** — portable C header file for embedded software / firmware access
-- **Markdown Documentation** — auto-generated register reference documentation
+- **UVM RAL Model** - SystemVerilog UVM register abstraction layer for testbench integration
+- **SystemVerilog RTL** - synthesizable register block RTL with configurable bus interface
+- **C Header** - portable C header file for embedded software / firmware access
+- **Markdown Documentation** - auto-generated register reference documentation
 
 ## Supported Bus Protocols
 
