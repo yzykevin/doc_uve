@@ -1,4 +1,4 @@
-# UVE behavioral model library
+# UVE_MODEL: General-purpose reusable behavioral model library
 
 The UVE behavioral model library is maintained under `uve/model/uve_model` and is intended for simulation-oriented verification, SoC integration, and reusable standalone model checking.
 

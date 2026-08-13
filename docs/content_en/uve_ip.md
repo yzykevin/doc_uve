@@ -1,4 +1,4 @@
-# `uve_ip`: Reusable Design IP library
+# UVE_IP: General-purpose reusable Design IP library
 
 ```{toctree}
 :maxdepth: 1

@@ -1,4 +1,4 @@
-# `uve_pkg`: Reusable verification package library
+# UVE_PKG: General-purpose reusable verification package
 
 ```{toctree}
 :maxdepth: 1

@@ -1,4 +1,4 @@
-# `uve_arch`: Architecture exploration and performance platform
+# UVE_ARCH: Architecture exploration and performance analysis platform
 
 ```{toctree}
 :maxdepth: 1

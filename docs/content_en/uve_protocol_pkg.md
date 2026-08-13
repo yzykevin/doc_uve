@@ -1,4 +1,4 @@
-# `uve_protocol_pkg`: Reusable protocol verification package library
+# UVE_PROTOCOL_PKG: General-purpose reusable protocol verification package
 
 ```{toctree}
 :maxdepth: 1
