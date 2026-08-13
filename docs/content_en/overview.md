@@ -54,7 +54,7 @@ The simulation flow supports the major stages of a hardware verification run:
 Depending on the project and installed licenses, UVE supports integrations with:
 
 - Synopsys VCS;
-- Cadence Xcelium/XRUN;
+- Cadence Xcelium;
 - Icarus Verilog;
 - Verilator; and
 - other project-configured open-source simulators.
@@ -110,7 +110,7 @@ UVE supports SoC-level environment assembly through reusable design and verifica
 
 Verification jobs can be connected to managed compute resources through scheduler-aware flows. UVE includes integration patterns for Slurm and LSF, together with local execution for smaller tasks. Report services provide searchable summaries of tests, logs, results, coverage information, and project status.
 
-## Design IP library
+## `uve_ip`: Reusable Design IP library
 
 UVE includes a growing library of reusable design IP and integration examples. The library is intended to provide consistent starting points for common SoC functions and to make those functions available to both design and verification flows.
 
@@ -169,7 +169,7 @@ The catalog is extended as new reusable blocks and integration examples mature.
 
 The IP direction includes reusable protocol-oriented building blocks and configurable wrappers for interfaces such as AXI4-Lite and APB. Wrapper configuration allows the same integration concept to be adapted to different project contexts without requiring every project to rebuild the surrounding infrastructure.
 
-## Reusable verification packages
+## `uve_pkg`: Reusable verification package library
 
 The UVE verification package library provides reusable SystemVerilog/UVM infrastructure for common verification concerns, including:
 
@@ -185,9 +185,9 @@ The UVE verification package library provides reusable SystemVerilog/UVM infrast
 - protocol-oriented register support for AHB, APB, AXI, AXI-Stream, I2C, OCP, SPI, and UART; and
 - verification reports and shared helper services.
 
-The package library is complemented by protocol-oriented packages for reusable I2C, SPI, and UART verification support. These packages are intended to reduce repeated infrastructure work while allowing project-specific environments to remain flexible.
+The `uve_pkg` library provides the general-purpose verification foundation. It is complemented by a separate protocol package family described below.
 
-### Verification package catalog
+### `uve_pkg` package catalog
 
 The current reusable package set includes:
 
@@ -218,20 +218,26 @@ The current reusable package set includes:
 | `uve_reg_ocp_pkg` | OCP register verification support. |
 | `uve_reg_spi_pkg` | SPI register verification support. |
 | `uve_reg_uart_pkg` | UART register verification support. |
+The package catalog is designed for composition: teams can start with common services, add protocol packages, and extend the environment with project-specific verification components.
+
+## `uve_protocol_pkg`: Reusable protocol verification package library
+
+The `uve_protocol_pkg` family provides reusable verification components for common interfaces and protocols. It is separated from the general `uve_pkg` foundation so protocol-specific agents and services can be adopted independently.
+
+| Package | Overview |
+|---|---|
 | `uve_protocol_pkg` | Protocol-focused reusable verification package family. |
 | `uve_i2c_pkg` | Reusable I2C verification components. |
 | `uve_spi_pkg` | Reusable SPI verification components. |
 | `uve_uart_pkg` | Reusable UART verification components. |
 
-The package catalog is designed for composition: teams can start with common services, add protocol packages, and extend the environment with project-specific verification components.
-
 ### Verification IP and VIP direction
 
 UVE is developing a reusable verification-component and VIP library for common protocols and interface behaviors. The goal is to provide configurable agents, monitors, drivers, scoreboards, sequences, protocol checks, and reusable verification services that can be composed across projects.
 
-## Behavioral and architecture model library
+## UVE behavioral model library
 
-UVE includes an architecture-level modeling platform for early system exploration before detailed RTL implementation. The platform is based on software models and transaction-level interfaces, allowing teams to study system behavior, integration, and performance questions at an appropriate abstraction level.
+UVE includes a behavioral model library for simulation-oriented verification and system behavior studies. The models provide reusable representations of common processing, interconnect, memory, peripheral, security, and connectivity behavior for use alongside verification environments.
 
 Model and component areas include:
 
@@ -246,31 +252,39 @@ Model and component areas include:
 - telemetry and transaction-observation components; and
 - AI accelerator and NPU-oriented architecture exploration.
 
-The model library supports topology exploration, architecture review, performance studies, integration experiments, and structured handoff from architecture work toward RTL development.
+The behavioral model library supports simulation, integration experiments, software-visible behavior checks, and reusable system-level verification scenarios.
 
-### Architecture model catalog
+### Behavioral model catalog
 
 The architecture and behavioral model platform currently includes the following model families:
 
 | Model family | Overview |
 |---|---|
-| CPU models | RISC-V processor and CPU-wrapper exploration. |
-| Interconnect models | Crossbar, arbitration, and system-interconnect exploration. |
-| NoC models | Network-on-chip and topology exploration. |
-| Memory models | DDR/HBM-oriented memory-system studies. |
-| Chiplet models | Chiplet and die-to-die connectivity studies. |
-| PCIe models | PCIe connectivity and integration studies. |
-| Ethernet models | Ethernet connectivity and traffic studies. |
-| CXL models | CXL fabric and memory-expansion studies. |
-| Peripheral models | UART, SPI, I2C, GPIO, timer, watchdog, RTC, and interrupt behavior. |
-| Clock and power models | Clock, reset, and power-management behavior. |
-| Security models | Root-of-trust, secure-boot, and access-control behavior. |
-| Telemetry models | Passive observation and transaction-telemetry support. |
-| AI models | AI accelerator and NPU architecture exploration. |
+| CPU behavior models | Processor and CPU-wrapper behavior for simulation and integration studies. |
+| Interconnect behavior models | Crossbar, arbitration, and system-interconnect behavior. |
+| Memory behavior models | DDR/HBM-oriented memory behavior. |
+| Peripheral behavior models | UART, SPI, I2C, GPIO, timer, watchdog, RTC, and interrupt behavior. |
+| Connectivity behavior models | PCIe, Ethernet, CXL, and related connectivity behavior. |
+| Security behavior models | Root-of-trust, secure-boot, and access-control behavior. |
+| Telemetry behavior models | Passive observation and transaction-telemetry behavior. |
+| AI behavior models | AI accelerator and NPU-oriented behavior. |
 
-These model families are used for architecture exploration, integration experiments, performance studies, and software-visible system evaluation.
+## `uve_arch`: Architecture exploration and performance platform
 
-The architecture flow is based on SystemC and Accellera ecosystem technologies. It is being extended from component-level exploration toward complete system studies, software-visible behavior, Linux boot, and architecture-to-RTL validation.
+`uve_arch` is based on SystemC and Accellera ecosystem technologies and supports architecture exploration, system design studies, integration validation, and performance analysis before detailed RTL implementation. Its model families cover:
+
+| Architecture model family | Overview |
+|---|---|
+| CPU architecture models | RISC-V processor and CPU-wrapper architecture studies. |
+| Interconnect and NoC models | Crossbar, arbitration, NoC, and topology studies. |
+| Memory-system models | DDR/HBM and memory-controller performance studies. |
+| Chiplet and die-to-die models | Chiplet connectivity and system-integration studies. |
+| High-speed fabric models | PCIe, Ethernet, and CXL architecture studies. |
+| Peripheral-system models | UART, SPI, I2C, GPIO, timer, watchdog, RTC, and interrupt integration. |
+| Clock, power, and security models | Clock/power sequencing, root-of-trust, secure-boot, and access-control studies. |
+| AI/NPU architecture models | AI accelerator and NPU system exploration. |
+
+The architecture flow is being extended toward complete system studies, software-visible behavior, Linux boot, and architecture-to-RTL validation.
 
 ## Register and testbench generation
 
@@ -319,21 +333,6 @@ Capabilities include:
 - consistency checks across related descriptions; and
 - local report-server views for browsing project information.
 
-### Tool and product catalog
-
-| Tool or product | Overview |
-|---|---|
-| `uve_tools` | Main UVE command-line toolset for project flows and verification tasks. |
-| `run.py` | Common SystemVerilog/UVM flow entry point. |
-| `run_cocotb.py` | Python and cocotb flow entry point. |
-| `jg_run.py` | JasperGold-oriented formal and analysis flow entry point. |
-| `svunit.py` | SVUnit test discovery and execution support. |
-| `reggen` | Register description conversion and artifact generation. |
-| `uve-info` | Project and verification-package information browser. |
-| `uve-project-viewer` | UVE VS Code project exploration and review extension. |
-| `uve_arch` | SystemC/Accellera architecture modeling and exploration platform. |
-| `uve_ci` | Forgejo/Woodpecker-based CI/CD deployment and automation support. |
-
 ## UVE VS Code extension
 
 The UVE VS Code extension brings project exploration and review into the editor. It provides:
@@ -363,6 +362,6 @@ These capabilities support both individual development and repeatable team-level
 
 The CI/CD environment is built around Forgejo and Woodpecker workflows and is intended to support multi-project collaboration, automated validation, packaging, artifact publication, and repeatable engineering checks.
 
-## Development roadmap
+## Ongoing development
 
-UVE is an actively developing environment. Current development themes include broader reusable IP and VIP coverage, richer behavioral and architecture models, deeper register and verification-package integration, pyuvm and Python-flow support, expanded simulator and formal-tool support, Linux-boot-capable system studies, improved project analysis, and more capable editor-based workflows.
+UVE is under continuous development.
