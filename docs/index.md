@@ -2,68 +2,11 @@
 
 Universal Verification Environment
 
-> Should be executed in the project's root folder.
+This public site provides a high-level introduction to UVE and its companion tools. Detailed project procedures and implementation documentation are maintained separately and are not part of the public navigation.
 
 ```{toctree}
-:maxdepth: 3
-:caption: Before Start
+:maxdepth: 2
+:caption: Overview
 
-content_en/preparation.md
-content_en/manage_pre.md
-content_en/guideline.md
-content_en/uve_startup.md
-```
-
-```{toctree}
-:maxdepth: 4
-:caption: Simulation
-
-content_en/simulation.md
-content_en/simulation_snps.md
-content_en/simulation_cdns.md
-content_en/run_cocotb.md
-```
-
-```{toctree}
-:maxdepth: 3
-:caption: Regression
-
-content_en/regression.md
-content_en/regression_snps.md
-content_en/regression_cdns.md
-```
-
-```{toctree}
-:maxdepth: 3
-:caption: Other Libs
-
-content_en/libraries.md
-```
-
-```{toctree}
-:maxdepth: 3
-:caption: Job Scheduler
-
-content_en/job_scheduler.md
-```
-
-```{toctree}
-:maxdepth: 3
-:caption: Tools
-
-content_en/info_analysis.md
-content_en/gen_uvm.md
-content_en/gen_tb_related.md
-content_en/manage.md
-content_en/reggen.md
-content_en/server.md
-content_en/repo_link.md
-content_en/jg_run.md
-```
-
-```{toctree}
-:maxdepth: 3
-:caption: About
-
-content_en/author.md
+content_en/overview.md
 ```
