@@ -131,6 +131,40 @@ Current design-IP areas include:
 
 The design-IP library is developed with verification, register descriptions, documentation, and integration support in mind so that a block can be evaluated as part of a complete project rather than as an isolated source tree.
 
+### Design IP catalog
+
+The current self-developed Design IP catalog includes:
+
+| IP | Overview |
+|---|---|
+| `uve_uart` | UART peripheral and verification-ready integration support. |
+| `uve_spi_host` | SPI host peripheral. |
+| `uve_i2c` | I2C controller peripheral. |
+| `uve_gpio` | General-purpose I/O peripheral. |
+| `uve_mailbox` | Mailbox and message-passing support. |
+| `uve_intc` | Interrupt-control and interrupt-routing support. |
+| `uve_aon_timer` | Always-on timer function. |
+| `uve_timer` | General-purpose timer function. |
+| `uve_clk_mgr` | Clock-management support. |
+| `uve_reset_mgr` | Reset-management support. |
+| `uve_pmu` | Power-management support. |
+| `uve_pinmux` | Pin-multiplexing support. |
+| `uve_boot_rom` | Boot-ROM and startup support. |
+| `uve_soc_info` | SoC information and identification support. |
+| `uve_axi_apb_bridge` | AXI/APB bridge and integration support. |
+| `uve_noc_mgmt` | NoC management and system-control support. |
+| `uve_firewall` | Access-control and firewall support. |
+| `uve_errmgr` | Error-management support. |
+| `uve_debug_ctrl` | Debug-control support. |
+| `uve_debug_status` | Debug-status and observability support. |
+| `uve_debug_lock` | Debug-access lock and protection support. |
+| `uve_debug_bus_gate` | Debug-bus access-gating support. |
+| `uve_jtag_tap` | JTAG tap and debug connectivity support. |
+| `uve_dsp` | DSP-oriented processing support. |
+| `fly_npu` | AI/NPU-oriented processing support under active development. |
+
+The catalog is extended as new reusable blocks and integration examples mature.
+
 ### Protocol IP and configurable wrappers
 
 The IP direction includes reusable protocol-oriented building blocks and configurable wrappers for interfaces such as AXI4-Lite and APB. Wrapper configuration allows the same integration concept to be adapted to different project contexts without requiring every project to rebuild the surrounding infrastructure.
@@ -152,6 +186,44 @@ The UVE verification package library provides reusable SystemVerilog/UVM infrast
 - verification reports and shared helper services.
 
 The package library is complemented by protocol-oriented packages for reusable I2C, SPI, and UART verification support. These packages are intended to reduce repeated infrastructure work while allowing project-specific environments to remain flexible.
+
+### Verification package catalog
+
+The current reusable package set includes:
+
+| Package | Overview |
+|---|---|
+| `uve_base_pkg` | Base verification services and common foundations. |
+| `uve_common_pkg` | Shared verification utilities and common types. |
+| `uve_utils_pkg` | General-purpose verification helpers. |
+| `uve_env_pkg` | Reusable environment-level support. |
+| `uve_phase_pkg` | Verification phase and lifecycle support. |
+| `uve_clk_pkg` | Clock-related verification support. |
+| `uve_reset_pkg` | Reset-related verification support. |
+| `uve_sync_pkg` | Synchronization-related verification support. |
+| `uve_pins_pkg` | Pin-level verification support. |
+| `uve_interrupt_pkg` | Interrupt verification services. |
+| `uve_dma_pkg` | DMA-oriented verification support. |
+| `uve_memory_pkg` | Memory-oriented verification support. |
+| `uve_error_injection_pkg` | Error-injection and negative-testing support. |
+| `uve_performance_pkg` | Performance measurement and analysis support. |
+| `uve_report_pkg` | Verification result and report support. |
+| `uve_obj_pool_pkg` | Reusable object and transaction-pool support. |
+| `uve_reg_utils_pkg` | Register-model utilities. |
+| `uve_reg_ahb_pkg` | AHB register verification support. |
+| `uve_reg_apb_pkg` | APB register verification support. |
+| `uve_reg_axi_pkg` | AXI register verification support. |
+| `uve_reg_axis_pkg` | AXI-Stream register verification support. |
+| `uve_reg_i2c_pkg` | I2C register verification support. |
+| `uve_reg_ocp_pkg` | OCP register verification support. |
+| `uve_reg_spi_pkg` | SPI register verification support. |
+| `uve_reg_uart_pkg` | UART register verification support. |
+| `uve_protocol_pkg` | Protocol-focused reusable verification package family. |
+| `uve_i2c_pkg` | Reusable I2C verification components. |
+| `uve_spi_pkg` | Reusable SPI verification components. |
+| `uve_uart_pkg` | Reusable UART verification components. |
+
+The package catalog is designed for composition: teams can start with common services, add protocol packages, and extend the environment with project-specific verification components.
 
 ### Verification IP and VIP direction
 
@@ -175,6 +247,28 @@ Model and component areas include:
 - AI accelerator and NPU-oriented architecture exploration.
 
 The model library supports topology exploration, architecture review, performance studies, integration experiments, and structured handoff from architecture work toward RTL development.
+
+### Architecture model catalog
+
+The architecture and behavioral model platform currently includes the following model families:
+
+| Model family | Overview |
+|---|---|
+| CPU models | RISC-V processor and CPU-wrapper exploration. |
+| Interconnect models | Crossbar, arbitration, and system-interconnect exploration. |
+| NoC models | Network-on-chip and topology exploration. |
+| Memory models | DDR/HBM-oriented memory-system studies. |
+| Chiplet models | Chiplet and die-to-die connectivity studies. |
+| PCIe models | PCIe connectivity and integration studies. |
+| Ethernet models | Ethernet connectivity and traffic studies. |
+| CXL models | CXL fabric and memory-expansion studies. |
+| Peripheral models | UART, SPI, I2C, GPIO, timer, watchdog, RTC, and interrupt behavior. |
+| Clock and power models | Clock, reset, and power-management behavior. |
+| Security models | Root-of-trust, secure-boot, and access-control behavior. |
+| Telemetry models | Passive observation and transaction-telemetry support. |
+| AI models | AI accelerator and NPU architecture exploration. |
+
+These model families are used for architecture exploration, integration experiments, performance studies, and software-visible system evaluation.
 
 The architecture flow is based on SystemC and Accellera ecosystem technologies. It is being extended from component-level exploration toward complete system studies, software-visible behavior, Linux boot, and architecture-to-RTL validation.
 
@@ -224,6 +318,21 @@ Capabilities include:
 - tool and environment information;
 - consistency checks across related descriptions; and
 - local report-server views for browsing project information.
+
+### Tool and product catalog
+
+| Tool or product | Overview |
+|---|---|
+| `uve_tools` | Main UVE command-line toolset for project flows and verification tasks. |
+| `run.py` | Common SystemVerilog/UVM flow entry point. |
+| `run_cocotb.py` | Python and cocotb flow entry point. |
+| `jg_run.py` | JasperGold-oriented formal and analysis flow entry point. |
+| `svunit.py` | SVUnit test discovery and execution support. |
+| `reggen` | Register description conversion and artifact generation. |
+| `uve-info` | Project and verification-package information browser. |
+| `uve-project-viewer` | UVE VS Code project exploration and review extension. |
+| `uve_arch` | SystemC/Accellera architecture modeling and exploration platform. |
+| `uve_ci` | Forgejo/Woodpecker-based CI/CD deployment and automation support. |
 
 ## UVE VS Code extension
 
