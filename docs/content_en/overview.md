@@ -2,6 +2,7 @@
 
 UVE is a hardware verification environment and engineering toolchain for IP, subsystem, SoC, and chiplet development. It combines reusable verification packages, project-aware automation, simulator and formal-tool flows, register and testbench generation, reporting, and architecture-level modeling in one environment.
 
+<!-- split: verification -->
 ## Verification environment
 
 UVE provides a common project foundation for:
@@ -21,6 +22,7 @@ UVE connects project setup, design and testbench composition, pre-compilation, s
 
 The flow is intended to scale from focused IP verification to subsystem and SoC projects. It supports modular project components, reusable examples, configurable tool adapters, and the ability to add or replace flow stages as project needs evolve.
 
+<!-- split: toolchain -->
 ## UVE toolchain
 
 The UVE toolchain brings the main verification activities under a consistent set of project-oriented tools.
@@ -110,6 +112,7 @@ UVE supports SoC-level environment assembly through reusable design and verifica
 
 Verification jobs can be connected to managed compute resources through scheduler-aware flows. UVE includes integration patterns for Slurm and LSF, together with local execution for smaller tasks. Report services provide searchable summaries of tests, logs, results, coverage information, and project status.
 
+<!-- split: uve_ip -->
 ## `uve_ip`: Reusable Design IP library
 
 UVE includes a growing library of reusable design IP and integration examples. The library is intended to provide consistent starting points for common SoC functions and to make those functions available to both design and verification flows.
@@ -169,6 +172,7 @@ The catalog is extended as new reusable blocks and integration examples mature.
 
 The IP direction includes reusable protocol-oriented building blocks and configurable wrappers for interfaces such as AXI4-Lite and APB. Wrapper configuration allows the same integration concept to be adapted to different project contexts without requiring every project to rebuild the surrounding infrastructure.
 
+<!-- split: uve_pkg -->
 ## `uve_pkg`: Reusable verification package library
 
 The UVE verification package library provides reusable SystemVerilog/UVM infrastructure for common verification concerns, including:
@@ -220,6 +224,7 @@ The current reusable package set includes:
 | `uve_reg_uart_pkg` | UART register verification support. |
 The package catalog is designed for composition: teams can start with common services, add protocol packages, and extend the environment with project-specific verification components.
 
+<!-- split: uve_protocol_pkg -->
 ## `uve_protocol_pkg`: Reusable protocol verification package library
 
 The `uve_protocol_pkg` family provides reusable verification components for common interfaces and protocols. It is separated from the general `uve_pkg` foundation so protocol-specific agents and services can be adopted independently.
@@ -235,6 +240,7 @@ The `uve_protocol_pkg` family provides reusable verification components for comm
 
 UVE is developing a reusable verification-component and VIP library for common protocols and interface behaviors. The goal is to provide configurable agents, monitors, drivers, scoreboards, sequences, protocol checks, and reusable verification services that can be composed across projects.
 
+<!-- split: behavior_models -->
 ## UVE behavioral model library
 
 UVE includes a behavioral model library for simulation-oriented verification and system behavior studies. The models provide reusable representations of common processing, interconnect, memory, peripheral, security, and connectivity behavior for use alongside verification environments.
@@ -269,6 +275,7 @@ The architecture and behavioral model platform currently includes the following 
 | Telemetry behavior models | Passive observation and transaction-telemetry behavior. |
 | AI behavior models | AI accelerator and NPU-oriented behavior. |
 
+<!-- split: uve_arch -->
 ## `uve_arch`: Architecture exploration and performance platform
 
 `uve_arch` is based on SystemC and Accellera ecosystem technologies and supports architecture exploration, system design studies, integration validation, and performance analysis before detailed RTL implementation. Its model families cover:
@@ -286,6 +293,7 @@ The architecture and behavioral model platform currently includes the following 
 
 The architecture flow is being extended toward complete system studies, software-visible behavior, Linux boot, and architecture-to-RTL validation.
 
+<!-- split: generation -->
 ## Register and testbench generation
 
 UVE provides generators that turn structured descriptions into consistent project artifacts.
@@ -317,6 +325,7 @@ These generators provide repeatable starting points while leaving the project te
 
 Generation is designed to be composable: projects can combine generated configuration, testbench, register, coverage, Jasper, report, and statistical-analysis artifacts with hand-written project content.
 
+<!-- split: project_analysis -->
 ## Project information and analysis
 
 UVE provides tools for turning project metadata into useful engineering views and reports.
@@ -333,6 +342,7 @@ Capabilities include:
 - consistency checks across related descriptions; and
 - local report-server views for browsing project information.
 
+<!-- split: editor -->
 ## UVE VS Code extension
 
 The UVE VS Code extension brings project exploration and review into the editor. It provides:
@@ -347,6 +357,7 @@ The UVE VS Code extension brings project exploration and review into the editor.
 - local and remote development support; and
 - an integrated UVE User Guide for the complete project operation reference.
 
+<!-- split: ci -->
 ## Continuous integration and project automation
 
 UVE includes project automation capabilities for:
@@ -362,6 +373,7 @@ These capabilities support both individual development and repeatable team-level
 
 The CI/CD environment is built around Forgejo and Woodpecker workflows and is intended to support multi-project collaboration, automated validation, packaging, artifact publication, and repeatable engineering checks.
 
+<!-- split: ongoing -->
 ## Ongoing development
 
 UVE is under continuous development.
