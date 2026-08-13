@@ -1,6 +1,8 @@
 # UVE behavioral model library
 
-```{include} overview.md
-:start-after: "<!-- split: behavior_models -->"
-:end-before: "<!-- split: uve_arch -->"
+```{toctree}
+:maxdepth: 1
+:caption: Behavioral model areas
+
+behavior_catalog
 ```

@@ -1,6 +1,8 @@
 # `uve_arch`: Architecture exploration and performance platform
 
-```{include} overview.md
-:start-after: "<!-- split: uve_arch -->"
-:end-before: "<!-- split: generation -->"
+```{toctree}
+:maxdepth: 1
+:caption: Architecture areas
+
+uve_arch_catalog
 ```

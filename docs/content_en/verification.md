@@ -1,6 +1,9 @@
 # Verification environment and complete verification flow
 
-```{include} overview.md
-:start-after: "<!-- split: verification -->"
-:end-before: "<!-- split: toolchain -->"
+```{toctree}
+:maxdepth: 1
+:caption: Verification areas
+
+verification_environment
+verification_flow
 ```

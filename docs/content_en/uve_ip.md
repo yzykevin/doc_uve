@@ -1,6 +1,9 @@
 # `uve_ip`: Reusable Design IP library
 
-```{include} overview.md
-:start-after: "<!-- split: uve_ip -->"
-:end-before: "<!-- split: uve_pkg -->"
+```{toctree}
+:maxdepth: 1
+:caption: Design IP areas
+
+uve_ip_catalog
+uve_ip_protocol
 ```
